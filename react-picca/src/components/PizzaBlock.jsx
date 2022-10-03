@@ -20,12 +20,12 @@ export const PizzaBlock = ({title,price,imageUrl,sizes,types}) => {
     <ul>
       
        {
-      types?.map((typeId)=>(<li onClick={()=>setActivType(typeId)} className={ActivType===typeId?"active":""}>{typeNames[typeId]}</li>))
+      types?.map((typeId)=>(<li key={typeId} onClick={()=>setActivType(typeId)} className={ActivType===typeId?"active":""}>{typeNames[typeId]}</li>))
     } 
     </ul>
     <ul>
    {
-    sizes?.map((i)=>(<li onClick={()=>setActivSize(i)} className={ActivSize===i?"active":""}>{i}</li>))
+    sizes?.map((i)=>(<li key={sizes} onClick={()=>setActivSize(i)} className={ActivSize===i?"active":""}>{i}</li>))
    }
     </ul>
   </div>
